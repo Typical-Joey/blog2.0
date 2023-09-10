@@ -9,6 +9,7 @@ import Navbar from "./Navbar/Navbar";
 import Footer from "./Footer/Footer";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { getPostById } from "./services/PostService";
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,9 @@ const router = createBrowserRouter([
   {
     path: "/post/:postId",
     element: <Post />,
+    loader: async ({ request, params }) => {
+      return await getPostById(params.postId);
+    },
   },
 ]);
 
