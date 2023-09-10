@@ -13,3 +13,16 @@ h1 {
   font-size: 36px;
   color: #333333;
 }
+
+.global {
+  position: relative;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
