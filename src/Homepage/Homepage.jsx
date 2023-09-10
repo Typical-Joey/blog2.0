@@ -2,9 +2,11 @@ import React, { useEffect, useState } from "react";
 import "./homepage.css";
 import { getAllPosts } from "../services/PostService";
 import { Container } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 function Homepage() {
   const [posts, setPosts] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     async function getData() {
@@ -35,7 +37,10 @@ function Homepage() {
               <h1>{post.name}</h1>
               <p>
                 {post.body.slice(0, 100)}...
-                <button className="btn btn-link" name="postID" value={post.id}>
+                <button
+                  className="btn btn-link"
+                  onClick={() => navigate(`/post/${post._id}`)}
+                >
                   Read More
                 </button>
               </p>
