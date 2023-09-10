@@ -6,6 +6,7 @@ import Compose from "./Compose/Compose";
 import Contact from "./Contact/Contact";
 import Post from "./Posts/Post";
 import Navbar from "./Navbar/Navbar";
+import Footer from "./Footer/Footer";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -38,5 +39,6 @@ root.render(
   <>
     <Navbar />
     <RouterProvider router={router} />
+    <Footer />
   </>
 );
