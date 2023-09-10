@@ -9,3 +9,13 @@ export async function getAllPosts() {
     return null;
   }
 }
+
+export async function getPostById(postId) {
+  try {
+    const post = await fetch(`${API_URL}/${postId}`);
+    return post.json();
+  } catch (error) {
+    console.error(error);
+    return null;
+  }
+}
