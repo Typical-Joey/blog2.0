@@ -30,7 +30,7 @@ export async function createPost(title, body) {
       },
       body: JSON.stringify(post),
     });
-    return response;
+    return response.status;
   } catch (error) {
     console.error(error);
     return null;
