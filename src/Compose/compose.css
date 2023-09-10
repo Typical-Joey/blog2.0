@@ -1,3 +1,19 @@
 .compose-container {
-  margin-top: 2rem;
+  margin-top: 4rem;
+  width: 60% !important;
+}
+
+.submit-button {
+  color: #777;
+  background-color: white;
+  border: 1px solid #1abc9c;
+  border-radius: 8px;
+  width: 5rem;
+  height: 2.5rem;
+  float: right;
+}
+.submit-button:hover {
+  background-color: #1abc9c;
+  color: white;
+  border: none;
 }
