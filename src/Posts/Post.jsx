@@ -7,9 +7,9 @@ export default function Post() {
   const post = useLoaderData();
 
   return (
-    <Container>
-      <h1>Name: {post.name}</h1>
-      <h2>Body: {post.body}</h2>
+    <Container className="post-container">
+      <h1>{post.name}</h1>
+      <p>{post.body}</p>
     </Container>
   );
 }
