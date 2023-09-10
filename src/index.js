@@ -10,6 +10,7 @@ import Footer from "./Footer/Footer";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { getPostById } from "./services/PostService";
+import "./globalStyles.css";
 
 const router = createBrowserRouter([
   {
@@ -40,9 +41,9 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
-  <>
+  <div className="global">
     <Navbar />
     <RouterProvider router={router} />
     <Footer />
-  </>
+  </div>
 );

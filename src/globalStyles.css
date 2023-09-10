@@ -1,0 +1,15 @@
+*,
+h1,
+p {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+p {
+  font-size: 14px;
+  color: #333333;
+}
+
+h1 {
+  font-size: 36px;
+  color: #333333;
+}
