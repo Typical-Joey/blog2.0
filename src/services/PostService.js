@@ -19,3 +19,20 @@ export async function getPostById(postId) {
     return null;
   }
 }
+
+export async function createPost(title, body) {
+  try {
+    const post = { postName: title, postBody: body };
+    const response = await fetch(API_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(post),
+    });
+    return response;
+  } catch (error) {
+    console.error(error);
+    return null;
+  }
+}
