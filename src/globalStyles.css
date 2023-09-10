@@ -18,7 +18,7 @@ h1 {
   position: relative;
   min-height: 100vh;
   margin: 0;
-  padding: 0;
+  padding-bottom: 80px;
 }
 
 html {
