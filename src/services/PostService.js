@@ -2,7 +2,7 @@ const API_URL = process.env.REACT_APP_API_URL;
 
 export async function getAllPosts() {
   try {
-    const posts = await fetch(API_URL, { referrerPolicy: "unsafe_url" });
+    const posts = await fetch(API_URL);
     return posts.json();
   } catch (error) {
     console.error(error);
@@ -12,9 +12,7 @@ export async function getAllPosts() {
 
 export async function getPostById(postId) {
   try {
-    const post = await fetch(`${API_URL}/${postId}`, {
-      referrerPolicy: "unsafe_url",
-    });
+    const post = await fetch(`${API_URL}/${postId}`);
     return post.json();
   } catch (error) {
     console.error(error);
@@ -27,7 +25,6 @@ export async function createPost(title, body) {
     const post = { postName: title, postBody: body };
     const response = await fetch(API_URL, {
       method: "POST",
-      referrerPolicy: "unsafe_url",
       headers: {
         "Content-Type": "application/json",
       },
