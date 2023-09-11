@@ -2,7 +2,6 @@ const API_URL = process.env.REACT_APP_API_URL;
 
 export async function getAllPosts() {
   try {
-    console.log(process.env.REACT_APP_API_URL);
     const posts = await fetch(API_URL);
     return posts.json();
   } catch (error) {
